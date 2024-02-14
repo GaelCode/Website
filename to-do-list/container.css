@@ -1,0 +1,171 @@
+.containers {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.barre-info{
+    padding: 20px;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid grey;
+}
+
+
+
+.affichage-to-do{
+    width: 80%;
+    height: 100%;
+    background: url("./painting_colorful_spiral_abstract-77896.jpg") no-repeat 0 center fixed;
+    background-size: cover;
+    padding: 3%;
+    overflow-y: auto;
+    
+    /* technique pour changer l'opacité d'une background image */
+    position: relative;
+    isolation: isolate;
+}
+
+/* permet de creer un conteneur au dessus et de changer son opacite */
+.affichage-to-do::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgb(255, 255, 255);
+    opacity: .5;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
+
+}
+
+header img{
+    width: 120px;
+    margin-right: 50px;
+}
+
+header .pseudo{
+    font-size: 1.5em;
+}
+
+nav{
+    font-size: 1.5em;
+    height: 100%;
+}
+
+.vue-to-do{
+    height: 75%;
+}
+
+.vue-to-do div{
+    margin-bottom: 15%;
+}
+
+.vue-to-do div:hover{
+    color: rgb(127, 240, 255);
+}
+
+.create-to-do{
+    display: flex;
+    margin: auto;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: rgb(127, 240, 255);
+    border-radius: 8px;
+    border-bottom-right-radius: 20px;
+}
+
+.affichage-to-do h1{
+    margin: auto;
+    text-align: center;
+}
+
+.new-to-do{
+
+    position: fixed;
+    left: 35%;
+    top: 40%;
+    width: 30%;
+    height: 350px;
+
+    display: flex;
+
+    display: none;
+    border: 2px solid black;
+    background-color: rgb(212, 212, 196);
+    border-radius: 30px;
+    padding: 20px;
+
+    text-align: center;
+
+    
+}
+
+.question-to-do{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.question-to-do button{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    align-self: center;
+}
+
+.question-to-do button:hover, .question-to-do input:hover, .question-to-do textarea:hover, .info-time input:hover{
+    border: 3px gray solid;
+}
+
+textarea{
+    resize: none;
+}
+
+/* modification style des to-do */
+
+.task-element{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-top: 2%;
+
+}
+
+.premiere-ligne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.premiere-ligne h1{
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 1.4em;
+}
+
+.premiere-ligne .horaire{
+    flex-direction: flex-end;
+}
+
+@media screen and (min-width: 1200px) {
+    .vue-to-do div{
+        margin-bottom: 8%;
+    }
+}

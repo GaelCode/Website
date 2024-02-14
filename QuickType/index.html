@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>QuickType</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>QuickType</h1>
+        <h2>"Improve your typing skills and become faster to meet your own needs !"</h2>
+    </header>
+    <main>
+        <div class="Display-Text" id="DisplayText">
+            Display the text
+        </div>
+        <div class="zone-Response" id="zoneResponse">
+            <textarea name="response" id="response" cols="60" rows="1"></textarea>
+        </div>
+        <div class="zone-Score">
+            <div class="zoneTemps">
+                <span>Timer : </span>
+                <div id="time">
+                    0
+                </div>
+                <span> secondes</span>
+            </div>
+            <br>
+            <div class="score">
+                Votre Score : <span></span> wpm
+            </div>
+        </div>
+        <div class="comment" id="comunication">
+            <span>You want to let us information:</span>
+            <button>Survey</button>
+        </div>
+    </main>
+    <footer>
+        <p>Improve your skills !</p>
+    </footer>
+</body>
+</html>

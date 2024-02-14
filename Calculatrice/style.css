@@ -1,0 +1,97 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+header{
+    height: 20vh;
+    padding-right: 80px;
+    padding-left: 80px;
+    background-color: aquamarine;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+
+header p{
+    font-size: 1.5em;
+}
+
+h1{
+    font-size: 2.5em;
+    color: orange;
+    margin-bottom: 70px;
+    margin-top: 0;
+}
+
+main{
+    height: 60vh;
+    display: flex;
+}
+
+.containers{
+    display: flex;
+    height: 40vh;
+    width: 30vh;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+.barre-calcul{
+    background-color: white;
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 5px;
+    font-size: 1.5em;
+    border: 4px black solid;
+}
+
+.touches{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    margin: auto;
+    gap: 5px;
+}
+.column1, .column2, .column3, .simple-calcul, .reset-calcul{
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+} 
+
+.column1 button,
+.column2 button,
+.column3 button,
+.simple-calcul button,
+.reset-calcul button {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.column1 button:hover,
+.column2 button:hover,
+.column3 button:hover,
+.simple-calcul button:hover,
+.reset-calcul button:hover{
+    background-color: green;
+}

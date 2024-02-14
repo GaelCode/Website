@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice en ligne</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculatrice en ligne</h1>
+        <p>Calculatrice en ligne gratuite, un outil indispensable pour tous les calculs du quotidien. Surtout si on a pas directement une caluculatrice physique à portée de main. Calculez facilement les additions, soustractions, multiplications, divisions et bien plus ...</p>
+    </header>
+    <main>
+        <div class="containers">
+            <div class="barre-calcul" id="barreCalcul">
+                0
+            </div>
+            <div class="touches">
+                <div class="column1">
+                    <button id="sept" value="7">7</button>
+                    <button id="quatre" value="4">4</button>
+                    <button id="un" value="1">1</button>
+                    <button id="zero" value="0">0</button>
+                </div>
+                <div class="column2">
+                    <button id="huit" value="8">8</button>
+                    <button id="cinq" value="5">5</button>
+                    <button id="deux" value="2">2</button>
+                    <button id="point" value=".">.</button>
+                </div>
+                <div class="column3">
+                    <button id="neuf" value="9">9</button>
+                    <button id="six" value="6">6</button>
+                    <button id="trois" value="3">3</button>
+                    <button id="egale" value="=">=</button>
+
+                </div>
+
+                <div class="simple-calcul">
+                    <button id="diviser" value="/">/</button>
+                    <button id="multiplier" value="x">x</button>
+                    <button id="soustraire" value="-">-</button>
+                    <button id="addition" value="+">+</button>
+                </div>
+                <div class="reset-calcul">
+                    <button id="reset" value="AC">AC</button>
+                    <button id="supprimer" value="DEL">DEL</button>
+                    <button id="carre" value="(">(</button>
+                    <button id="racine-carre" value=")">)</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

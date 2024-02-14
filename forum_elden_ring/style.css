@@ -1,0 +1,153 @@
+/* Styles CSS pour le design de la page */
+html, body, .containers {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles communs pour le texte */
+* {
+    color: white;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* Styles pour l'en-tête */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px white solid;
+}
+
+header h1 {
+    padding-left: 50px;
+    padding-top: 0px;
+    margin: 0;
+}
+
+/* Styles pour le conteneur principal */
+.containers {
+    background: url("./containers_image_elden_ring.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    /* modifier l'opacite de l'image */
+    position: relative;
+    isolation: isolate;
+}
+
+/* modifier l'opacite de l'image */
+.containers::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(85, 77, 77);
+    z-index: -1;
+    inset: 0;
+    opacity: .5;
+}
+
+/* Styles pour l'en-tête et le contenu principal */
+header, main {
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+/* Styles pour l'affichage du compte utilisateur */
+.compte {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* Styles pour l'image du compte utilisateur */
+.image {
+    width: 60%;
+}
+
+.compte .image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* Styles pour l'affichage du pseudo utilisateur */
+.affichage-Pseudo {
+    font-size: 1.3em;
+    max-height: 60%;
+    margin-left: 10%;
+}
+
+main {
+    height: 100%;
+}
+
+/* Styles pour la section des messages */
+.message {
+    height: 75%;
+    overflow-y: auto;
+}
+
+/* Styles pour la zone de rédaction des messages */
+.ecriture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+/* Styles pour la zone de texte */
+textarea {
+    resize: none;
+    border-radius: 30px;
+    padding: 10px;
+    width: 70%;
+    font-size: 1.3em;
+    background-color: rgba(255, 255, 255, 0.288);
+}
+
+/* Styles pour les messages individuels */
+.messageNv {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    border-bottom: 2px white solid;
+    border-left: 2px white solid;
+    border-right: 2px white solid;
+    border-radius: 10px;
+}
+
+/* Styles pour le texte des messages */
+.messageNvTexte {
+    width: 100%;
+    margin: auto;
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Styles pour le pseudo des messages */
+.messageNvPseudo {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+
+.messageNvPseudo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.messageNvPseudo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.5;
+    margin-right: 10px;
+}

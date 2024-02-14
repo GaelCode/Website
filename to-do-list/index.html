@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./connexion.css">
+    <link rel="stylesheet" href="./container.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="./main.js" defer></script>
+    <script src="./pop-up.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./createToDo.js" defer></script>
+</head>
+<body>
+    <div class="connexion">
+        <div class="se-connecter" id="seConnecter">
+            <h1>Se connecter</h1>
+            <input type="text" id="nom" placeholder="Nom" autofocus required>
+            <input type="password" id="motDePasse" placeholder="Mot de passe">
+            <p>Je n'ai pas de compte ?</p>
+            <button id="conf">Confirmer</button>
+        </div>
+        <div class="creer-un-compte not-Display" id="creerUnCompte">
+            <h1>Créer un compte</h1>
+            <input type="text" id="nom2" placeholder="Nom" autofocus required>
+            <input type="password" id="motDePasse2" placeholder="Mot de passe">
+            <input type="password" id="verifMotDePasse" placeholder="Vérification mot de passe">
+            <div class="erreur not-Display">
+                Il y a une erreur.
+            </div>
+            <button id="conf2">Confirmer</button>
+        </div>
+    </div>
+    <div class="containers not-Display">
+        <div class="barre-info">
+            <header>
+                <img src="./profil_inconnu.jpg" alt="profile">
+                <!-- pseudo de la personne -->
+                <div class="pseudo">
+
+                </div>
+            </header>
+            <nav>
+                <div class="vue-to-do">
+                    <div class="personnel">
+                        Personnel
+                    </div>
+                    <div class="travail">
+                        Travail
+                    </div>
+                    <div class="important">
+                        Important
+                    </div>
+                </div>
+                <button class="create-to-do" id="createToDo">Create to-do</button>
+            </nav>
+        </div>
+        <div class="affichage-to-do">
+            <h1>Votre to-do liste :</h1>
+        </div>
+    
+    </div>
+    <div class="new-to-do not-Display" id="newToDo">
+        <h1>Créer un nouveau to-do :</h1>
+        <div class="question-to-do">
+            <input type="text" id="titre" placeholder="titre">
+            <select id="typeToDo">
+                <option value="Travail">Travail</option>
+                <option value="Personnel">Personnel</option>
+                <option value="Important">Important</option>
+            </select>
+            <div class="info-time">
+                <input type="date" id="date">
+                <input type="number" id="heure" placeholder="heure" max="24" min="0">
+            </div>
+            <textarea id="information" placeholder="Plus d'information" cols="30" rows="10"></textarea>
+            <button id="create">créer</button>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

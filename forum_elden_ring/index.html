@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Elden Ring</title>
+    <link rel="stylesheet" href="./pop-up.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <script src="./popUp.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <!-- creation de la pop-up -->
+    <div class="containers-pop-up" id="containersPopUp">
+        <div class="pop-up" id="popUp">
+            <h1>Identification</h1>
+            <form>
+                <input type="text" placeholder="Pseudo" id="pseudo">
+                <input type="password" placeholder="Password" id="motDePasse">
+            </form>
+            <div id="zoneErreur">
+
+            </div>
+            <a>Create an account !</a>
+            <button id="confirmer">Confirmer</button>
+        </div>
+        <!-- Si l'utilisateur n'a pas de compte -->
+        <div class="forgot-Password not-Display" id="forgotPassword">
+            <h1>Create an account</h1>
+            <form>
+                <input type="text" placeholder="Pseudo" id="pseudo2">
+                <input type="password" placeholder="Password" id="motDePasse2">
+                <input type="password" placeholder="Verification" id="verification">
+            </form>
+            <div id="zoneErreur2">
+
+            </div>
+            <button id="confirmer2">Confirmer</button>
+        </div>
+    </div>
+    <!-- Le site -->
+    <div class="containers" id="Containers">
+        <header>
+            <h1>FORUM</h1>
+            <div class="compte">
+                <div class="image">
+                    <img src="./profil_inconnu.jpg" alt="Profil inconnu">
+                </div>
+                <div class="affichage-Pseudo" id="affichagePseudo">
+                    Johny
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="message" id="AllMessage">
+
+            </div>
+            <div class="ecriture">
+                <textarea  id="ecritureMessage" placeholder="Your message" cols="30" rows="10"></textarea>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

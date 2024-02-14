@@ -1,0 +1,87 @@
+.connexion{
+    min-height: 100vh;
+    min-width: 100vh;
+    background: url('./to_do_list_connexion.jpeg') no-repeat 0 center fixed;
+    background-size: cover;
+}
+
+.se-connecter h1{
+    margin-bottom: 10px;
+    color: rgb(88, 85, 85);
+}
+
+.se-connecter{
+    font-size: 1.5em;
+    height: 100vh;
+    width: 40vh;
+    background-color: rgb(134, 196, 204);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.se-connecter p{
+    text-decoration: underline;
+    color: blue;
+    font-size: 0.6em;
+}
+
+input, select{
+    font-size: 0.8em;
+}
+
+input, button, select{
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.se-connecter p:hover{
+    color: blueviolet;
+}
+
+.not-Display{
+    display: none;
+}
+
+.connexion img{
+    max-width: 70vh;
+    min-height: 100vh;
+}
+
+.creer-un-compte{
+    font-size: 1.5em;
+    height: 100vh;
+    width: 40vh;
+    background-color: rgb(134, 196, 204);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.erreur{
+    color: red;
+    font-size: 0.6em;
+}
+
+@media screen and (max-width: 1000px) {
+    .se-connecter h1{
+        font-size: 1.5em;
+    }
+    .se-connecter input{
+        font-size: 0.6em;
+    }
+
+    .creer-un-compte h1{
+        font-size: 1.3em;
+    }
+    .creer-un-compte input{
+        font-size: 0.6em;
+    }
+    .erreur{
+        font-size: 0.5em;
+    }
+}

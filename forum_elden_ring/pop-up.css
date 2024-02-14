@@ -1,0 +1,105 @@
+/* Styles CSS pour la pop-up d'identification */
+.containers-pop-up {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background: url('./image_elden_ring.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Styles pour la pop-up principale et la pop-up "Forgot your password?" */
+.pop-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(39, 70, 90, 0.767);
+    margin: auto;
+    width: 30%;
+    padding: 30px;
+    font-size: 1.2em;
+}
+
+.pop-up, .forgot-Password {
+    border-radius: 50px;
+}
+
+/* Styles pour les boutons dans les pop-up */
+.pop-up button, .forgot-Password button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(219, 190, 27);
+    font-weight: bolder;
+}
+
+.pop-up button:hover, .forgot-Password button:hover {
+    border: 3px black solid;
+    background-color: rgb(200, 190, 27);
+}
+
+/* Styles pour les formulaires */
+form {
+    width: 100%;
+}
+
+/* Styles pour les champs de saisie dans les pop-up */
+.pop-up input, .forgot-Password input {
+    width: 50%;
+    border-radius: 20px;
+    padding: 5px;
+    margin: auto;
+    color: black;
+}
+
+.pop-up input:hover, .forgot-Password input:hover {
+    border: 2px rgba(80, 255, 11, 0.514) solid;
+}
+
+/* Styles pour le lien "Create an account !" */
+.pop-up a {
+    text-decoration: underline;
+    color: blue;
+}
+
+.pop-up a:hover {
+    color: blueviolet;
+}
+
+/* Styles pour le formulaire et la pop-up "Create an account" */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forgot-Password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(39, 70, 90, 0.767);
+    margin: auto;
+    width: 30%;
+    padding: 30px;
+    font-size: 1.2em;
+}
+
+/* Styles pour le titre des pop-up */
+.pop-up h1, .forgot-Password h1 {
+    color: rgb(179, 179, 179);
+}
+
+/* Styles pour la classe not-Display (cachée) */
+.not-Display {
+    display: none;
+}
+
+/* Media query pour les écrans de moins de 1000px de large */
+@media screen and (max-width: 1000px) {
+    .pop-up, .forgot-Password {
+        width: 50%;
+    }
+}

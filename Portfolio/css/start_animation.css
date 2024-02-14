@@ -1,0 +1,40 @@
+.cursor{
+    width: 1.5vh;
+    height: 2.5vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    
+}
+
+.cursor::after{
+    content: "";
+    width: 30vh;
+    height: 2.5vh;
+    background-color: rgb(124, 124, 124);
+
+    
+    position: absolute;
+    left: 100%; 
+}
+
+
+.move-cursor{
+    position: absolute;
+    width: 25vh;
+    height: 2.5vh;
+
+    padding: 0;
+}
+
+.text-home{
+    display: flex;
+    flex-direction: row;
+    width: 25vh;
+    height: 3vh;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.25vh;
+    color: rgb(226, 226, 226);
+}

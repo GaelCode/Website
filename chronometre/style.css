@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    padding-top: 40vh;
+    background: linear-gradient(to top,rgb(87, 130, 165), purple);
+}
+
+.containers{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: rgb(161, 151, 177);
+    width: 30vh;
+    border-radius: 40px;
+    box-shadow: 0px 1px 12px 12px #91399c;
+}
+
+h1{
+    font-size: 1.3rem;
+}
+
+.time{
+    border: solid 1px;
+    height: 1.2em;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boutton{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: blueviolet;
+}
+
+.Save-time{
+    max-height: 20vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}

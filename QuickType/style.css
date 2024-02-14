@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display&family=Oswald:wght@400;500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+}
+
+header{
+    margin: 0;
+    font-size: 3em;
+    background-image: url('./keyboard.jpeg');
+    background-size: cover;
+    height: 55%;
+    padding: 10%;
+    color: white;
+    transition: height 2s ease-in-out;
+}
+
+header h1{
+    margin: 0;
+    font-size: 4em;
+    margin-bottom: 15%;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+
+main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 1.5em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: height 2s ease-in-out;
+    overflow: hidden;
+    height: auto;
+}
+
+textarea{
+    border-radius: 5px;
+    font-size: 1.5em;
+    width: 60%;
+    /* le texte continue en ligne */
+    white-space: nowrap; 
+    /* enlève la barre de défilement */
+    overflow: hidden;
+    text-align: center;
+    border-color: rgb(168, 185, 193);
+}
+
+textarea:focus {
+    border: 2px solid rgb(167, 103, 203);
+}
+
+.Display-Text{
+    font-size: 1.2em;
+    border: 2px solid wheat;
+    border-radius: 10px;
+}
+
+.zone-Response textarea {
+    resize: none;
+}
+
+.comment button{
+    width: 100px;
+    height: 30px;
+    font-size: 0.8em;
+}
+
+.zoneTemps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    margin-top: 30vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 50px;
+}
+
+footer p{
+    font-size: 1.5em;
+}
+
+
+.hidden-text {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    html {
+        margin: 0;
+        height: 100%;
+    }
+
+    header {
+        height: 60vh;
+        padding-top: 30%;
+    }
+    
+    header h1{
+        font-size: 1.2em;
+    }
+
+    header h2{
+        font-size: 1em;
+    }
+
+    main .Display-Text{
+        font-size: 0.8em;
+    }
+    main .zoneTemps {
+        font-size: 0.8em;
+    }
+
+    footer, textarea, .comment, .score {
+        font-size: 0.8em;
+    }
+}
