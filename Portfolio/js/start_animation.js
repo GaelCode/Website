@@ -3,6 +3,8 @@ let letters = document.querySelectorAll(".letter");
 let introduction = document.querySelector(".introduction");
 let cursor = document.querySelector(".cursor");
 
+let site = document.querySelector(".site");
+
 let sommeTime = 0;
 
 const timeline = gsap.timeline();
@@ -22,5 +24,6 @@ positions.forEach((position) => {
 
 setTimeout(() => {
     introduction.style.display = "none";
+    site.classList.remove("not-display");
 }, sommeTime + 500);
 
