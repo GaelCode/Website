@@ -30,47 +30,53 @@
             </div>
     </section>
 
-    <section class="site not-display">
-        <header>
-            <div class="presentation">
-                Presentation
-            </div>
-            <div class="skills">
-                Skills
-            </div>
-            <div class="project">
-                Project
-            </div>
-            <div class="contact-me">
-                Contact-me
-            </div>
-        </header>
+    <section class="site not-display apparition">
+        
         <main>
-            <div class="some-information-about-me">
-                <h1>Hi, I'm Gaël Oddos-Marcel !</h1>
-                <p>I'm a young french developer studying computer science at BUT 1, located near to Paris, currently seeking an apprenticeship opportunity. If you're interested in learning more about me and my work, I encourage you to take a look at my portfolio.</p>
+            <header class="somary">
+                <a href="#mySkills">
+                    <div class="skills" class="somary">
+                        Skills
+                    </div>
+                </a>
+                <a href="#myProject">
+                    <div class="project" class="somary">
+                        Project
+                    </div>
+                </a>
+                <a href="#contactMe">
+                    <div class="contact-me" class="somary">
+                        Contact-me
+                    </div>
+                </a>
+            </header>
+            <div class="some-information-about-me" id="someInformationAboutMe">
+                <h1 class="apparition"><span>Hi</span>, I'm Gaël Oddos-Marcel !</h1>
+                <p class="apparition">I'm a <span>young french developer</span> studying computer science at BUT 1, located near to Paris, currently seeking an <span>apprenticeship opportunity</span>. If you're interested in learning more about me and my work, I <span>encourage</span> you to take a look at my portfolio.</p>
             </div>
-            <div class="my-skills">
-                <h1>My skills :</h1>
-                <div class="ligne1">
-                    <img src="./assets/html-logo.jpg" alt="html logo">
-                    <img src="./assets/css-logo.jpg" alt="css logo">
-                    <img src="./assets/js-logo.jpg" alt="javascript logo">
+                <div class="my-skills panel" id="mySkills">
+                    <h1 class="apparition">My skills :</h1>
+                    <div class="ligne1">
+                        <img src="./assets/html-logo.png.png" alt="html logo">
+                        <img src="./assets/css-logo.png" alt="css logo">
+                        <img src="./assets/js-logo.png" alt="javascript logo">
+                    </div>
+                    <div class="ligne2">
+                        <img src="./assets/ts-logo.png" alt="typescript logo">
+                        <img src="./assets/sql-logo.png" alt="SQL logo">
+                        <img src="./assets/C-logo.png" alt="C logo">
+                    </div>
                 </div>
-                <div class="ligne2">
-                    <img src="./assets/typescript-logo.jpg" alt="typescript logo">
-                    <img src="./assets/sql-logo.jpg" alt="SQL logo">
-                    <img src="./assets/C-logo.jpg" alt="C logo">
+                <div class="my-Project panel" id="myProject">
+                    <h1>My projects :</h1>
                 </div>
-            </div>
-            <div class="my-Project">
-                <h1>My projects :</h1>
-            </div>
         </main>
-        <footer>
+        <footer id="contactMe">
             <h1>Do you want to contact me ?</h1>
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="./assets/mail-logo.jpg" alt="mail logo"></a>
-            <a href="https://github.com/GaelCode" target="_blank"><img src="./assets/gitHub-logo.jpg" alt="gitHub logo"></a>
+            <div class="contact">
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="./assets/mail-logo.jpg" alt="mail logo">goddosmarcel@gmail.com</a>
+                <a href="https://github.com/GaelCode" target="_blank"><img src="./assets/gitHub-logo.jpg" alt="gitHub logo"></a>
+            </div>
         </footer>
     </section>
 </body>

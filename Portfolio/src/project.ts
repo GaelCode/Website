@@ -27,5 +27,6 @@ for (const elt of projects){
     `
     newProject.style.background = `url(${elt.sourceImage}) no-repeat center`
     newProject.classList.add("project")
+    newProject.classList.add("apparition")
     myProject.appendChild(newProject)
 }

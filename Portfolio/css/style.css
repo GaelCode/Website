@@ -7,8 +7,18 @@ html, body, section {
     color: white;
 }
 
+.apparition{
+    opacity: 1;
+}
+
+
+
 .site{
-    background-color: rgb(116, 116, 116);
+    background-image: url(./../assets/eberhard-grossgasteiger-HDxsIFHz4TI-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
 }
 
 .introduction{
@@ -24,9 +34,65 @@ html, body, section {
     display: none;
 }
 
+header{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    transition: text-shadow 1s ease;
+    position: relative;
+}
+
+header a:hover {
+    color: rgba(69, 246, 252, 1);
+    text-shadow: 4px 0 rgba(255, 255, 255, 0.5),
+                 8px 0 rgba(255, 255, 255, 0.5),
+                 12px 0 rgba(255, 255, 255, 0.5);
+}
+
 main{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
+
+.some-information-about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+
+    height: 80vh;
+}
+
+h1 span{
+    color: rgb(0, 195, 255);
+}
+
+p span{
+    color: rgb(0, 195, 255);
+}
+
+.some-information-about-me h1{
+    font-size: 2.3rem;
+    opacity: 1;
+}
+
+.some-information-about-me p{
+    width: 60%;
+    font-size: 1.3rem;
+}
+
 
 .my-skills{
     display: flex;
@@ -34,9 +100,12 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 
+    background-color: rgba(116, 116, 116, 0.8);
     position: relative;
     width: 100%;
+    height: 100vh;
 }
 
 .my-skills h1{
@@ -71,18 +140,20 @@ main{
     align-items: center;
     width: 100%;
     gap: 10px;
+    height: 100vh;
+
+    margin-bottom: 20vh;
 }
 
 .my-Project h1{
     width: 100%;
     text-align: center;
-    margin-bottom: 50px;
     margin-top: 50px;
 }
 
 .my-Project div{
     width: 12vh;
-    height: 50vh;
+    height: 60vh;
     border-radius: 20px;
     background-size: cover;
     text-align: center;
@@ -121,13 +192,51 @@ main{
     height: 100%;
 }
 
-footer img{
-    width: 10vh;
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: rgb(116,116,116);
+    border-top: 2px black solid;
+    margin-top: 50px;
 }
+
+.contact a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+
+a img{
+    width: 50px;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+}
+
 
 @media screen and (max-width:1300px) {
     .my-Project{
         flex-direction: column;
+        height: 150vh;
     }
     .my-Project div{
         height: 20vh;
@@ -141,9 +250,41 @@ footer img{
     }
 }
 
+@media screen and (max-width:850px){
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .contact{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+    }
+}
+
+@media  screen and (max-width:730px) {
+    footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    header{
+        font-size: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 500px){
+    header{
+        font-size: 1rem;
+    }
     h1{
-        font-size: 1em;
+        font-size: 1.3rem;
     }
     .my-Project div{
         height: 15vh;
@@ -152,5 +293,8 @@ footer img{
     .my-Project div:hover{
         width: 70%;
     }
+    .some-information-about-me p{
+        width: 100%;
+        font-size: 1.1rem;
+    }
 }
-/* regarder responsive (pad dingue pour l'instant */

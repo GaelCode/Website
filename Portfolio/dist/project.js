@@ -14,5 +14,6 @@ for (var _i = 0, projects_1 = projects; _i < projects_1.length; _i++) {
     newProject.innerHTML = "\n        <a href=".concat(elt.sourceGitHub, " target=\"_blank\">\n            <h3>").concat(elt.nom, "</h3> \n        </a>\n        <p style=\"visibility: hidden\">").concat(elt.description, "</p>\n    ");
     newProject.style.background = "url(".concat(elt.sourceImage, ") no-repeat center");
     newProject.classList.add("project");
+    newProject.classList.add("apparition");
     myProject.appendChild(newProject);
 }
