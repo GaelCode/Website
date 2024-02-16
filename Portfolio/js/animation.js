@@ -46,6 +46,15 @@ setTimeout(() => {
         opacity: 0.1,
         duration: 3
     })
+    gsap.from(".my-Project",{
+        scrollTrigger: {
+            trigger: ".my-Project",
+            start: "top 60%"
+        },
+        x: "-200px",  
+        opacity: 0.1,
+        duration: 3
+    })
 
 }, sommeTime + 500);
 
