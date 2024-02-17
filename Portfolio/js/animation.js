@@ -42,7 +42,7 @@ setTimeout(() => {
             trigger: ".ligne2",
             start: "top 60%"
         },
-        x: "-200px",  
+        x: "-200px", 
         opacity: 0.1,
         duration: 3
     })

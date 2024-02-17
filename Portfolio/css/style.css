@@ -16,16 +16,29 @@ html, body, section {
 }
 
 
+.gradient{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #FF0000, #FF4500, #FFA500, #FFFF00, #ADFF2F, #32CD32, #008000, #006400, #0000FF, #4169E1, #00008B, #8A2BE2, #9932CC, #800080, #FF00FF, #FF1493, #FF69B4, #FFC0CB);
+    animation: gradientAnimation 10s infinite alternate;
+    background-size: 400%;
+}
 
 .site{
-    background-image: url(./../assets/eberhard-grossgasteiger-HDxsIFHz4TI-unsplash.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
+    background-image: url(./../assets/pattern_triangle.png);
+}
+
+@keyframes gradientAnimation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
 
 .introduction{
-    background-color: rgb(124, 124, 124);
+    background-color: rgb(68, 68, 68);
     position: relative;
     display: flex;
     align-items: center;
@@ -75,6 +88,7 @@ main{
     text-align: center;
     padding: 40px;
 
+    color: rgb(255, 255, 255);
     height: 80vh;
 }
 
@@ -87,13 +101,13 @@ p span{
 }
 
 .some-information-about-me h1{
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     opacity: 1;
 }
 
 .some-information-about-me p{
     width: 60%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 
