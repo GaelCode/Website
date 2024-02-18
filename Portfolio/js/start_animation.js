@@ -24,6 +24,5 @@ positions.forEach((position) => {
 
 setTimeout(() => {
     introduction.style.display = "none";
-    site.classList.remove("not-display");
 }, sommeTime + 500);
 

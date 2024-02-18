@@ -1,14 +1,18 @@
 let project = document.querySelectorAll(".project")
 
+
 project.forEach((div) => {
     let paragraph = div.querySelector("p");
+    let h3 = div.querySelector("h3")
 
     div.addEventListener('mouseover', () => {
         paragraph.style.visibility = "visible"
+        h3.style.color = "rgb(69, 246, 252)"
     })
 
     div.addEventListener('mouseout', () => {
         paragraph.style.visibility = "hidden"
+        h3.style.color = "white"
     })
 })
 
@@ -52,7 +56,7 @@ setTimeout(() => {
             start: "top 60%"
         },
         x: "-200px",  
-        opacity: 0.1,
+        opacity: 0.3,
         duration: 3
     })
 
