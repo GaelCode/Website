@@ -121,7 +121,7 @@ main{
     left: 0;
     bottom: -10px;
     background-color: white;
-    animation: animationCursor 0.8s infinite;
+    animation: animationCursor 1s infinite;
 }
 
 
