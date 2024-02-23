@@ -63,11 +63,74 @@ main{
     margin-top: 20vh;
 }
 
+.new-word, .second-word, .third-word, .fourth-word, .fifth-word{
+    width: 100%;
+    height: 22%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.second-word{
+    opacity: 0.8;
+}
+
+.third-word{
+    opacity: 0.6;
+}
+
+.fourth-word{
+    opacity: 0.4;
+}
+
+.fifth-word{
+    opacity: 0.2;
+}
+
+.current-span{
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+}
+
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes animationCursor{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.cursor::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    animation: animationCursor 0.8s infinite;
+}
+
+
+
 .choice{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .letter{
@@ -78,7 +141,7 @@ main{
 }
 
 .line1{
-    height: 6vmin;
+    height: 6vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -87,7 +150,7 @@ main{
 }
 
 .line2{
-    height: 6vmin;
+    height: 6vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -96,10 +159,16 @@ main{
 }
 
 .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
-    width: 8vmin;
-    height: 5vmin;
+    width: 8vw;
+    height: 5vh;
     background-color: rgb(217, 217, 217);
     border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
 }
 
 .letter1:hover, .letter2:hover, .letter3:hover, .letter4:hover, .letter5:hover, .letter6:hover, .letter7:hover, .letter8:hover, .letter9:hover, .letter10:hover, .diferent-buttons button:hover{
@@ -107,15 +176,127 @@ main{
 }
 
 .diferent-buttons{
-    width: 40vh;
-    height: 5vmin;
+    width: 100vh;
+    height: 5vh;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .diferent-buttons button{
-    width: calc(16vmin + 20px);
+    width: calc(16vw + 20px);
     border-radius: 20px;
     background-color: rgb(217, 217, 217);
+
+    font-size: 1.5rem;
 }
+
+@media screen and (max-height:950px){
+    .account{
+        width: 120px;
+        margin-right: 10px;
+    }
+    .account img{
+        width: 50px;
+    }
+    .account i{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-height:700px){
+    .account{
+        width: 120px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .account img{
+        width: 50px;
+    }
+    .account i{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:1200px){
+
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+        width: 12vw;
+        height: 6vh;
+    }
+
+    .diferent-buttons button{
+        width: calc(24vw + 20px);
+        height: 6vh;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cursor, .current-span{
+        font-size: 1.8rem;
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+    .second-word, .third-word, .fourth-word, .fifth-word{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    .line1, .line2{
+        gap: 5px;
+    }
+
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+        width: 15vw;
+        height: 6vh;
+
+        font-size: 1.5rem;
+    }
+
+    .diferent-buttons{
+        gap: 5px;
+    }
+
+    .diferent-buttons button{
+        width: calc(30vw + 5px);
+        height: 6vh;
+
+        font-size: 1.5rem;
+    }
+
+    .cursor, .current-span{
+        font-size: 1.5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .second-word, .third-word, .fourth-word, .fifth-word{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:350px){
+    .cursor, .current-span{
+        font-size: 1rem;
+        height: 1rem;
+        width: 1rem;
+    }
+    .second-word, .third-word, .fourth-word, .fifth-word{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-height:750px){
+    .line1, .line2{
+        height: 8vh;
+    }
+
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+        height: 8vh;
+    }
+
+    .diferent-buttons button{
+        height: 8vh;
+    }
+}
+
