@@ -16,7 +16,7 @@ html, body{
 header{
     width: 100vw;
     height: 5vh;
-    padding: 5px;
+    padding: 10px;
     padding-left: 20px;
     margin-bottom: 30px;
 
@@ -28,12 +28,13 @@ header{
     align-items: center;
 }
 
-header .account{
+.account{
     width: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding-right: 5px;
 }
 
 .account img{
@@ -78,7 +79,7 @@ main{
 
 .line1{
     height: 6vmin;
-    width: 60vw;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -87,7 +88,7 @@ main{
 
 .line2{
     height: 6vmin;
-    width: 40vw;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
