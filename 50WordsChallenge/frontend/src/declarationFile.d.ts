@@ -1,0 +1,1 @@
+declare function wordVerification(word: string): boolean;
