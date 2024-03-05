@@ -109,7 +109,7 @@ letters.forEach(function (element) {
 var Confirm = document.querySelector(".confirm");
 var choosingWords = [];
 Confirm.addEventListener('click', function () {
-    if (wordVerification(verificationWord.toLowerCase())) {
+    if (wordVerification(verificationWord.toLowerCase()) && choosingWords.indexOf(verificationWord) === -1) {
         choosingWords.unshift(verificationWord);
         console.log(choosingWords);
         // remove all the span in the div new-word

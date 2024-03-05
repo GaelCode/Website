@@ -150,7 +150,7 @@ let Confirm = document.querySelector(".confirm") as HTMLButtonElement
 let choosingWords : String[] = []
 
 Confirm.addEventListener('click', () => {
-    if (wordVerification(verificationWord.toLowerCase())){
+    if (wordVerification(verificationWord.toLowerCase()) && choosingWords.indexOf(verificationWord) === -1){
 
         choosingWords.unshift(verificationWord)
         console.log(choosingWords)

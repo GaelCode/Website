@@ -288,6 +288,12 @@ main{
     .second-word, .third-word, .fourth-word, .fifth-word{
         font-size: 1rem;
     }
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+        font-size: 1.2rem;
+    }
+    .diferent-buttons button{
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-height:750px){
