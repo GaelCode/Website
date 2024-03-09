@@ -238,7 +238,7 @@ p span{
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 10px;
+    gap: 15px;
     height: 100vh;
 
     margin-bottom: 20vh;
@@ -263,7 +263,6 @@ p span{
     position: relative;
     isolation: isolate;
     transition: width 0.3s ease; 
-    margin-right: 10px;
 }
 
 .my-Project div:hover{
@@ -399,5 +398,16 @@ a img{
     .some-information-about-me p{
         width: 100%;
         font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-height:650px){
+    .my-Project p{
+        margin: 0;
+        padding: 0;
+    }
+    .my-Project h3{
+        margin: 5px;
+        padding: 0;
     }
 }

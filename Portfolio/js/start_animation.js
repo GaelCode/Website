@@ -9,20 +9,25 @@ let sommeTime = 0;
 
 const timeline = gsap.timeline();
 const positions = [
-    "2.4vh", "3.4vh", "4.1vh", "5vh", "6.1vh", "7.8vh", "8.8vh", "9.3vh", "10.2vh", 
-    "11.4vh", "11.9vh", "13.6vh", "14.7vh", "15.2vh", "16.4vh", "17.6vh", "18.4vh", "19vh", 
-    "19.9vh", "20.8vh", "21.5vh", "22.2vh", "23.4vh", "24vh","24.7vh"
+    "2.5vw", "4.7vw", "6.9vw", "8.8vw", "10.8vw", "13vw", "15vw", "17vw", "19vw", "21.2vw",
+"23.2vw", "25.2vw", "27.2vw", "29.2vw", "31.7vw", "33.7vw", "36.2vw", "38.4vw", "40.5vw", "42.4vw"
+, "44.8vw", "47vw", "49vw", "51vw","53.0vw"
+
+
+
+
+
 ];
 
 
 positions.forEach((position) => {
     let random = Math.random() * 3;
     sommeTime += random * 0.1 * 1000;
-    timeline.to(".cursor", { x: position, duration: 0, delay: random * 0.1});
+    timeline.to(".cursor", { x: position, duration: 0, delay:random * 0.1}); 
 });
 
 
 setTimeout(() => {
     introduction.style.display = "none";
-}, sommeTime + 500);
+}, sommeTime + 700);
 
