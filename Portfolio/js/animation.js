@@ -47,3 +47,35 @@ setTimeout(() => {
 
 
 
+let rightButton = document.querySelector(".right-button")
+let leftButton = document.querySelector(".left-button")
+let block = document.querySelector(".block")
+
+let pos = 0;
+leftButton.style.display = "none"
+
+rightButton.addEventListener("click", () =>{
+    if (pos < 75){
+        rightButton.style.display = "block";
+        leftButton.style.display = "block"
+        pos+= 25
+        block.style.transform = `translateX(-${pos}vw)`
+        if (pos === 75){
+            rightButton.style.display = "none"
+        }
+    }
+})
+
+leftButton.addEventListener("click", () =>{
+    if (pos > 0){
+        leftButton.style.display = "block"
+        rightButton.style.display = "block";
+        pos-= 25
+        block.style.transform = `translateX(-${pos}vw)`
+        if (pos === 0){
+            leftButton.style.display = "none"
+        }
+    }
+})
+
+
