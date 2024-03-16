@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', () =>{
+    let customCursor = document.querySelector(".custom-cursor")
+    let cursorBefore = document.querySelector(".custom-cursor-before")
+
+    document.addEventListener("mousemove", (e) => {
+        // se déplace de x par rapport à la position de la souris (en gros ça suit la souris)
+        customCursor.style.left = e.clientX - 21 +'px'
+        customCursor.style.top = e.clientY  - 21 +'px'
+
+        cursorBefore.style.left = e.clientX  +'px'
+        cursorBefore.style.top = e.clientY  +'px'
+    })
+})
+
+
+
+
 let project = document.querySelectorAll(".project")
 
 
