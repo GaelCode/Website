@@ -11,7 +11,7 @@ html, body{
     padding: 0;
     overflow: hidden;
     background-color: rgb(50, 52, 55);
-    color: white;
+    color: black;
 }
 
 header{
@@ -196,6 +196,12 @@ main{
     font-size: 1.5rem;
 }
 
+
+
+.logo{
+    width: 100px;
+}
+
 @media screen and (max-height:950px){
     .account{
         width: 120px;
@@ -236,6 +242,13 @@ main{
     }
 }
 
+
+@media screen and (max-width:800px){
+    .logo{
+        width: 85px;
+    }
+}
+
 @media screen and (max-width:700px) {
     .cursor, .current-span{
         font-size: 1.8rem;
@@ -244,6 +257,25 @@ main{
     }
     .second-word, .third-word, .fourth-word, .fifth-word{
         font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:1280px) and (max-height:800px){
+    .logo{
+        width: 70px;
+    }
+}
+
+@media screen and (max-width:1100px) and (max-height:600px){
+    .logo{
+        width: 60px;
+    }
+}
+
+
+@media screen and (max-width:550px) and (max-height:720px){
+    .logo{
+        width: 65px;
     }
 }
 
@@ -278,6 +310,16 @@ main{
     .second-word, .third-word, .fourth-word, .fifth-word{
         font-size: 1.5rem;
     }
+
+    .logo{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .logo{
+        width: 60px;
+    }
 }
 
 @media screen and (max-width:350px){
@@ -295,6 +337,8 @@ main{
     .diferent-buttons button{
         font-size: 1.2rem;
     }
+
+
 }
 
 @media screen and (max-height:750px){
