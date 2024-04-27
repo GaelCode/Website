@@ -40,7 +40,7 @@ function initializeLetters(choosingLetters: string[]){
     // For choosing the consonants with random
     let occurConsonant: number[] = [];
 
-    while (occurConsonant.length < 10 - numberVowel) {
+    while (occurConsonant.length < 12 - numberVowel) {
         let choiceConsonant: number = Math.floor(Math.random() * 20);
         if (occurConsonant.indexOf(choiceConsonant) === -1) {
             choosingLetters.push(consonant[choiceConsonant]);
@@ -54,7 +54,7 @@ function initializeLetters(choosingLetters: string[]){
     // adding this words in the divs with the letter${i} class
 
     let letters: HTMLDivElement[] = [];
-    for (let i:number = 1; i <= 10; i++) {
+    for (let i:number = 1; i <= 12; i++) {
         letters.push(document.querySelector(".letter" + i) as HTMLDivElement);
     }
 
@@ -109,7 +109,7 @@ change.addEventListener('click', () => {
 // Initialize the new-word with the cursor
 
 let letters: HTMLDivElement[] = [];
-for (let i:number = 1; i <= 10; i++) {
+for (let i:number = 1; i <= 12; i++) {
     letters.push(document.querySelector(".letter" + i) as HTMLDivElement);
 }
 
@@ -155,7 +155,7 @@ Confirm.addEventListener('click', () => {
         choosingWords.unshift(verificationWord)
         console.log(choosingWords)
         // remove all the span in the div new-word
-        const spans = newWord.querySelectorAll('span');
+        const spans = newWord.querySelectorAll('span') as NodeListOf<HTMLSpanElement>;
         spans.forEach(span => {
             span.remove();
         });
@@ -164,7 +164,7 @@ Confirm.addEventListener('click', () => {
         span.classList.add("cursor")
         newWord.appendChild(span)
         
-        for (let i = 0; i < choosingWords.length; i++) {
+        for (let i = 0; i < 4; i++) {
             const wordDiv = [secondWord, thirdWord, fourthWord, fifthWord][i];
             if (choosingWords[i]) {
                 wordDiv.textContent = choosingWords[i].toString();
@@ -174,6 +174,48 @@ Confirm.addEventListener('click', () => {
 
 
         verificationWord = ""
+        
+    }
+})
+
+
+
+
+// modification when the button delete is pressed
+
+let deleteButton = document.querySelector(".delete") as HTMLButtonElement
+
+deleteButton.addEventListener('click', ()=> {
+
+    verificationWord = verificationWord.substring(0, verificationWord.length - 1)
+
+    // remove all the span in the div new-word
+    const spans = newWord.querySelectorAll('span') as NodeListOf<HTMLSpanElement>;
+    spans.forEach(span => {
+        span.remove();
+    });
+
+    if (verificationWord.length === 0){
+        let span = document.createElement("span") as HTMLSpanElement
+        span.classList.add("cursor")
+        newWord.appendChild(span)
+        return
+    }
+
+    for (let i :number = 0; i < verificationWord.length; i++){
+        
+
+        if (i + 1 < verificationWord.length){
+            let span = document.createElement("span") as HTMLSpanElement
+            span.textContent = verificationWord[i]
+            span.classList.add("current-span")
+            newWord.appendChild(span)
+        }else{
+            let span = document.createElement("span") as HTMLSpanElement
+            span.textContent = verificationWord[i]
+            span.classList.add("cursor")
+            newWord.appendChild(span)
+        }
         
     }
 })

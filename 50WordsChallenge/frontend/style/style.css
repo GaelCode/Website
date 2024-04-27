@@ -162,7 +162,7 @@ main{
     gap: 20px;
 }
 
-.letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+.letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10, .letter11, .letter12{
     width: 8vw;
     height: 5vh;
     background-color: rgb(217, 217, 217);
@@ -175,7 +175,7 @@ main{
 
 }
 
-.letter1:hover, .letter2:hover, .letter3:hover, .letter4:hover, .letter5:hover, .letter6:hover, .letter7:hover, .letter8:hover, .letter9:hover, .letter10:hover, .diferent-buttons button:hover{
+.letter1:hover, .letter2:hover, .letter3:hover, .letter4:hover, .letter5:hover, .letter6:hover, .letter7:hover, .letter8:hover, .letter9:hover, .letter10:hover, .diferent-buttons button:hover, .letter11:hover, .letter12:hover{
     background-color: rgb(158, 155, 155);
 }
 
@@ -188,7 +188,7 @@ main{
 }
 
 .diferent-buttons button{
-    width: calc(16vw + 20px);
+    width: calc(10vw + 20px);
     border-radius: 20px;
     background-color: rgb(217, 217, 217);
 
@@ -224,13 +224,13 @@ main{
 
 @media screen and (max-width:1200px){
 
-    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10, .letter11, .letter12{
         width: 12vw;
         height: 6vh;
     }
 
     .diferent-buttons button{
-        width: calc(24vw + 20px);
+        width: calc(16.5vw + 20px);
         height: 6vh;
     }
 }
@@ -251,7 +251,7 @@ main{
         gap: 5px;
     }
 
-    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10, .letter11, .letter12{
         width: 15vw;
         height: 6vh;
 
@@ -288,7 +288,7 @@ main{
     .second-word, .third-word, .fourth-word, .fifth-word{
         font-size: 1rem;
     }
-    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10{
+    .letter1, .letter2, .letter3, .letter4, .letter5, .letter6, .letter7, .letter8, .letter9, .letter10, .letter11, .letter12{
         font-size: 1.2rem;
     }
     .diferent-buttons button{

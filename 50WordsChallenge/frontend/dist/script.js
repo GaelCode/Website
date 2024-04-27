@@ -31,7 +31,7 @@ function initializeLetters(choosingLetters) {
     }
     // For choosing the consonants with random
     var occurConsonant = [];
-    while (occurConsonant.length < 10 - numberVowel) {
+    while (occurConsonant.length < 12 - numberVowel) {
         var choiceConsonant = Math.floor(Math.random() * 20);
         if (occurConsonant.indexOf(choiceConsonant) === -1) {
             choosingLetters.push(consonant[choiceConsonant]);
@@ -41,7 +41,7 @@ function initializeLetters(choosingLetters) {
     choosingLetters = shuffle(choosingLetters);
     // adding this words in the divs with the letter${i} class
     var letters = [];
-    for (var i = 1; i <= 10; i++) {
+    for (var i = 1; i <= 12; i++) {
         letters.push(document.querySelector(".letter" + i));
     }
     choosingLetters.forEach(function (element, i) {
@@ -78,7 +78,7 @@ change.addEventListener('click', function () {
 });
 // Initialize the new-word with the cursor
 var letters = [];
-for (var i = 1; i <= 10; i++) {
+for (var i = 1; i <= 12; i++) {
     letters.push(document.querySelector(".letter" + i));
 }
 letters.forEach(function (element) {
@@ -120,12 +120,42 @@ Confirm.addEventListener('click', function () {
         var span = document.createElement("span");
         span.classList.add("cursor");
         newWord.appendChild(span);
-        for (var i = 0; i < choosingWords.length; i++) {
+        for (var i = 0; i < 4; i++) {
             var wordDiv = [secondWord, thirdWord, fourthWord, fifthWord][i];
             if (choosingWords[i]) {
                 wordDiv.textContent = choosingWords[i].toString();
             }
         }
         verificationWord = "";
+    }
+});
+// modification when the button delete is pressed
+var deleteButton = document.querySelector(".delete");
+deleteButton.addEventListener('click', function () {
+    verificationWord = verificationWord.substring(0, verificationWord.length - 1);
+    // remove all the span in the div new-word
+    var spans = newWord.querySelectorAll('span');
+    spans.forEach(function (span) {
+        span.remove();
+    });
+    if (verificationWord.length === 0) {
+        var span = document.createElement("span");
+        span.classList.add("cursor");
+        newWord.appendChild(span);
+        return;
+    }
+    for (var i = 0; i < verificationWord.length; i++) {
+        if (i + 1 < verificationWord.length) {
+            var span = document.createElement("span");
+            span.textContent = verificationWord[i];
+            span.classList.add("current-span");
+            newWord.appendChild(span);
+        }
+        else {
+            var span = document.createElement("span");
+            span.textContent = verificationWord[i];
+            span.classList.add("cursor");
+            newWord.appendChild(span);
+        }
     }
 });
