@@ -1,11 +1,18 @@
 const express = require("express")
 const fs = require("fs")
 const cors = require("cors")
+const path = require("path")
 
 
 const site = express();
 site.use(express.json());
 site.use(cors())
+
+site.use(express.static(path.join(__dirname, '../frontend')))
+
+site.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, '../frontend','index.html'))
+})
 
 site.get('/word', async (req, res) => {
     try {

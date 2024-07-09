@@ -18,8 +18,9 @@ header{
     width: 100vw;
     height: 5vh;
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
     margin-bottom: 30px;
+    margin-top: 10px;
 
     font-family: "Bebas Neue", sans-serif;
 
@@ -27,6 +28,10 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+img[alt="logo website"]{
+    width: 65px;
 }
 
 .account{
