@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50WordsChallenge</title>
+
+    <link rel="stylesheet" href="./../style/style.css">
+    <link rel="stylesheet" href="./../style/normalize.css">
+    <link rel="stylesheet" href="./../style/connexion.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <script src="./../src/wordVerification.js" defer></script>
+    <script src="./../dist/script.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <a href="./.."><img src="./../assets/logo.svg" alt="logo website" class="logo"></a>
+
+        <div class="account">
+            <i class="fi fi-rr-bell"></i>
+            <img src="./../assets/account-logo.png" alt="account logo">
+        </div>
+        
+
+    </header>
+
+    <main>
+
+        <form method="post" action="/connexion">
+            <h1>Connexion</h1>
+            <label for="username">Login</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <a href="./../createAccount/">Create an account ?</a>
+            <button type="submit">Sign In</button>
+        </form>
+
+    </main>
+
+</body>
+</html>

@@ -28,6 +28,9 @@ site.get('/word', async (req, res) => {
 const connexion = require('./route/connexion')
 site.use('/connexion', connexion)
 
+const createAccount = require('./route/createAccount');
+site.use('/createAccount', createAccount)
+
 site.listen(3000, () => {
     console.log('Server is listening on port 3000');
 });

@@ -3,7 +3,7 @@ const path = require('path');
 const connexion = express.Router()
 
 connexion.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, '../../frontend','index.html'))
+    res.sendFile(path.join(__dirname, '../../frontend/connexion','index.html'))
 })
 
 
