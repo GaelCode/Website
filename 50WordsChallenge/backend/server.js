@@ -1,14 +1,25 @@
 const express = require("express")
 const fs = require("fs")
-const cors = require("cors")
 const path = require("path")
-
+const bodyParser = require("body-parser");//importation de body-parser pour pouvoir récupérer les données du body
+const session = require('express-session')
 
 const site = express();
+
+
 site.use(express.json());
-site.use(cors())
+site.use(bodyParser.urlencoded({ extended: true }));
+
 
 site.use(express.static(path.join(__dirname, '../frontend')))
+
+site.use(session({
+    secret: 'caractereAléatoirePourSecuriserSession',
+    resave: false,
+    saveUninitialized: true
+}))
+
+
 
 site.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../frontend','index.html'))
@@ -24,6 +35,7 @@ site.get('/word', async (req, res) => {
         res.status(500).send('Error reading JSON file');
     }
 });
+
 
 const connexion = require('./route/connexion')
 site.use('/connexion', connexion)

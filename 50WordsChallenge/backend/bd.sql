@@ -1,11 +1,11 @@
 CREATE TABLE Accounts(
-    username varchar2(15) PRIMARY KEY,
-    passwordHash varchar2(200)
+    username varchar(15) PRIMARY KEY,
+    passwordHash varchar(200)
 );
 
 CREATE TABLE Games(
     idGame integer,
-    username varchar2(15),
+    username varchar(15),
     nbreMots integer,
     dateGame DATE,
     PRIMARY KEY(idGame, username),
@@ -14,9 +14,10 @@ CREATE TABLE Games(
 
 CREATE TABLE Words(
     idGame integer,
-    username varchar2(15),
-    mot varchar2(50),
+    username varchar(15),
+    mot varchar(50),
     occurMot integer,
     FOREIGN KEY (idGame) REFERENCES Games(idGame) ON DELETE CASCADE,
-    FOREIGN KEY (username) REFERENCES Games(username) ON DELETE CASCADE
+    FOREIGN KEY (username) REFERENCES Games(username) ON DELETE CASCADE,
+    PRIMARY KEY (idGame, username)
 );
