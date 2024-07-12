@@ -6,9 +6,6 @@ const { body, validationResult } = require('express-validator'); // pour vérifi
 const mysql = require('mysql')
 
 
-
-
-
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -58,7 +55,7 @@ connexion.post('/', [
         }
 
         // on verifie les mots de passe pour voir si c'est les mêmes
-        const hashedPassword = results[0].password
+        const hashedPassword = results[0].passwordHash
         bcrypt.compare(password, hashedPassword, (err, result) => {
             // verifie s'il n'y a pas d'erreur lors de l'execution
             if (err) {

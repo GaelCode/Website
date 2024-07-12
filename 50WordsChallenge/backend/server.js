@@ -43,6 +43,9 @@ site.use('/connexion', connexion)
 const createAccount = require('./route/createAccount');
 site.use('/createAccount', createAccount)
 
+const informations = require('./route/informations')
+site.use('/informations', informations)
+
 site.listen(3000, () => {
     console.log('Server is listening on port 3000');
 });

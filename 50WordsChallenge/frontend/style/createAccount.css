@@ -13,9 +13,9 @@ form {
     align-items: center;
     padding-top: 10vh;
     position: absolute;
-    top: 42%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -45%);
 }
 
 form h1{

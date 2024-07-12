@@ -1,0 +1,32 @@
+main{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+}
+
+section{
+    width: 60vw;
+    background-color: #9C9C9C;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    height: 190px;
+    overflow: hidden;
+}
+
+section h1 {
+    margin-bottom: 0;
+}
+
+.texte{
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    overflow: hidden;
+}
+
+.date{
+    text-align: end;
+    opacity: .5;
+}
