@@ -51,6 +51,11 @@ img[alt="logo website"]{
     font-size: 30px;
     text-align: center;
     height: 100%;
+    color: black;
+}
+
+.account a:focus {
+    text-decoration: none;
 }
 
 main{

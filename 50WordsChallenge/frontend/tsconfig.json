@@ -4,5 +4,5 @@
         "strict": true,
         "lib": ["es2015", "dom", "es2015.promise"],
     },
-    "file": ["/src/script.ts"]
+    "file": ["/src/script.ts","/src/infoScript.ts"]
 }
