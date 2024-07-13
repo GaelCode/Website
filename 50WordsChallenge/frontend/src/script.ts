@@ -78,6 +78,10 @@ let fifthWord = document.querySelector(".fifth-word") as HTMLDivElement
 
 let change = document.querySelector(".change-letters") as HTMLButtonElement
 change.addEventListener('click', () => {
+    reset()
+})
+
+const reset = () =>{
     choosingLetters = []
     choosingWords = []
     initializeLetters(choosingLetters)
@@ -102,8 +106,11 @@ change.addEventListener('click', () => {
     fourthWord.textContent = ""
     fifthWord.textContent = ""
 
-    
-})
+    timer.innerText = "3:00"
+    startChronoVerification = false
+    time = 3*60
+
+}
 
 
 // Initialize the new-word with the cursor
@@ -210,7 +217,7 @@ deleteButton.addEventListener('click', ()=> {
             span.textContent = verificationWord[i]
             span.classList.add("current-span")
             newWord.appendChild(span)
-        }else{
+        }else{ 
             let span = document.createElement("span") as HTMLSpanElement
             span.textContent = verificationWord[i]
             span.classList.add("cursor")
@@ -219,3 +226,33 @@ deleteButton.addEventListener('click', ()=> {
         
     }
 })
+
+let startChronoVerification:boolean = false
+let time:number = 3*60
+
+const allLetters = document.querySelectorAll(".let") as NodeListOf<HTMLDivElement>
+let timer = document.querySelector(".timer") as HTMLParagraphElement
+
+
+
+allLetters.forEach((letter) => {
+    letter.addEventListener("click", () => {
+        if (!startChronoVerification){
+            startChronoVerification = true
+            timer.innerText = "3:00"
+        }
+    })
+})
+
+setInterval(() => {
+    if (startChronoVerification && time > 0){
+        time -=1
+        let minutes:number = Math.floor(time / 60);
+        let seconds:number = time % 60;
+        timer.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    } else {
+        if (time === 0){
+            reset()
+        }
+    }
+}, 1000)

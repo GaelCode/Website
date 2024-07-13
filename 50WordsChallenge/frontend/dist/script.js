@@ -58,6 +58,9 @@ var fourthWord = document.querySelector(".fourth-word");
 var fifthWord = document.querySelector(".fifth-word");
 var change = document.querySelector(".change-letters");
 change.addEventListener('click', function () {
+    reset();
+});
+var reset = function () {
     choosingLetters = [];
     choosingWords = [];
     initializeLetters(choosingLetters);
@@ -75,7 +78,10 @@ change.addEventListener('click', function () {
     thirdWord.textContent = "";
     fourthWord.textContent = "";
     fifthWord.textContent = "";
-});
+    timer.innerText = "3:00";
+    startChronoVerification = false;
+    time = 3 * 60;
+};
 // Initialize the new-word with the cursor
 var letters = [];
 for (var i = 1; i <= 12; i++) {
@@ -159,3 +165,28 @@ deleteButton.addEventListener('click', function () {
         }
     }
 });
+var startChronoVerification = false;
+var time = 3 * 60;
+var allLetters = document.querySelectorAll(".let");
+var timer = document.querySelector(".timer");
+allLetters.forEach(function (letter) {
+    letter.addEventListener("click", function () {
+        if (!startChronoVerification) {
+            startChronoVerification = true;
+            timer.innerText = "3:00";
+        }
+    });
+});
+setInterval(function () {
+    if (startChronoVerification && time > 0) {
+        time -= 1;
+        var minutes = Math.floor(time / 60);
+        var seconds = time % 60;
+        timer.innerText = "".concat(minutes, ":").concat(seconds < 10 ? '0' : '').concat(seconds);
+    }
+    else {
+        if (time === 0) {
+            reset();
+        }
+    }
+}, 1000);
