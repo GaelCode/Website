@@ -1,0 +1,34 @@
+footer {
+    height: 5vh;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10vw;
+    gap: 30px;
+}
+
+form button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+
+    background-color: #9C9C9C;
+}
+
+
+.disconnect:hover {
+    color: white;
+    background-color: rgb(44, 64, 95);
+}
+
+
+.delete:hover{
+    color: white;
+    background-color: red;
+}
