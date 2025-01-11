@@ -1,3 +1,3 @@
 # Project WordsChallenge
 
-Creation of a game online to train your vocabulary.
+Creation of an online game to train your vocabulary.
